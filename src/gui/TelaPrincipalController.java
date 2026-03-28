@@ -43,7 +43,7 @@ public class TelaPrincipalController {
         }
 
         //FUNÇÃO DO CANVAS
-        //PARA COLOCAR AS COORDENADAS
+        //PARA COLOCAR AS COORDENADAS DO MAPA
         mapaCanvas.setOnMouseClicked(event -> {
             double x = event.getX();
             double y = event.getY();
