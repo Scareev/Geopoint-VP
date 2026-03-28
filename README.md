@@ -4,6 +4,13 @@
 
 Geopoint VP é uma aplicação desktop desenvolvida em Java com JavaFX que permite ao usuário cadastrar e visualizar pontos geográficos em um mapa estático. Após fazer login, o usuário pode clicar no mapa para marcar coordenadas e salvá-las no banco de dados vinculadas à sua conta.
 
+## Imagens do projeto
+
+<div align="center">
+  <img width="49%" alt="Screenshot_51" src="https://github.com/user-attachments/assets/52d09a8a-2cef-413f-b758-f3b22d3e008c" />
+  <img width="49%" alt="Screenshot_52" src="https://github.com/user-attachments/assets/2190dae7-c003-4f87-b545-573ef2c3f997" />
+</div>
+
 ---
 
 ## Funcionalidades
