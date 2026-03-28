@@ -8,7 +8,7 @@ public class ConnectionFactory {
 
     private static final String URL = "jdbc:mysql://localhost:3306/Geopoint_VP";
     private static final String root = "root";
-    private static final String senha = "gatoraivoso248";
+    private static final String senha = "";
 
     // método GETTER para conexão via driver
     public static Connection getConnection(){

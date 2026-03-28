@@ -73,20 +73,20 @@ public class TelaPrincipalController {
         stage.show();
     }
 
-    @FXML public void salvarCoordenadas(){
-        PontoDAO dao = new PontoDAO();
-        pontos.setEixoX(Double.parseDouble(coordX.getText()));
-        pontos.setEixoY(Double.parseDouble(coordY.getText()));
-        pontos.setNome("SEM_NOME_POR_ENQUANTO");
-        pontos.setMunicipio("SEM_MUNICIPIO_POR_ENQUANTO");
-        pontos.setId_usuario(Session.getInstance().getUsuario().getId());
-        dao.salvarPontos(pontos);
-        System.out.println("Coordenadas salvas!" +
-                " " +
-                Session.getInstance().getUsuario().getNome() +
-                " " +
-                pontos.getEixoX() +
-                " " +
-                pontos.getEixoY());
+    @FXML public void salvarCoordenadas() throws IOException{
+        if(!coordX.getText().isEmpty() && !coordY.getText().isEmpty()) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaSalvarPonto.fxml"));
+            Parent root = loader.load();
+            TelaSalvarPontoController controller = loader.getController();
+            controller.setCoords(
+                    Double.parseDouble(coordX.getText()),
+                    Double.parseDouble(coordY.getText())
+            );
+            Stage telaSalvarCoordenadas = new Stage();
+            telaSalvarCoordenadas.setScene(new Scene(root));
+            telaSalvarCoordenadas.show();
+        } else {
+            System.out.println("não pode salvar vazio.");
+        }
     }
 }
